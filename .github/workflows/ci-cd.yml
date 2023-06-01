@@ -9,7 +9,7 @@ on:
 
 jobs:
   setup:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, example]
     strategy:
       matrix:
         node-version: [16.x]
@@ -24,7 +24,7 @@ jobs:
         run: npm ci
   build:
     needs: setup
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, example]
     strategy:
       matrix:
         node-version: [16.x]
@@ -41,7 +41,7 @@ jobs:
         run: npm run build
   test:
     needs: setup
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, example]
     strategy:
       matrix:
         node-version: [16.x]
@@ -58,7 +58,7 @@ jobs:
         run: npm run test
   lint:
     needs: setup
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, example]
     strategy:
       matrix:
         node-version: [16.x]
@@ -76,7 +76,7 @@ jobs:
   deploy:
     if: ${{github.event_name == 'push' && github.ref == 'refs/heads/master'}}
     needs: [build, lint, test]
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, example]
     strategy:
       matrix:
         node-version: [16.x]
