@@ -82,8 +82,6 @@ jobs:
         node-version: [16.x]
     steps:
       - name: install
-        run: npm i
+        run: npm ci
       - name: build
         run: npm run build
-      - name: restart pm2
-        run: pm2 restart example
