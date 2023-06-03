@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hello React, check deployment
+          abcd
         </a>
         <p className="App-link">Team number 2</p>
       </header>
