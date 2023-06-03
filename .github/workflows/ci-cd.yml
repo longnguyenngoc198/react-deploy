@@ -22,6 +22,13 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install
         run: npm ci
+  build:
+    needs: setup
+    runs-on: [self-hosted, example]
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Node.js version ${{ matrix.node-version }}
@@ -68,7 +75,7 @@ jobs:
         run: npm run lint
   deploy:
     if: ${{github.event_name == 'push' && github.ref == 'refs/heads/master'}}
-    needs: [lint, test]
+    needs: [build, lint, test]
     runs-on: [self-hosted, example]
     strategy:
       matrix:
