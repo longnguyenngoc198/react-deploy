@@ -1,6 +1,5 @@
 name: React CI-CD workflow
 run-name: Auto pipeline
-
 on:
   workflow_dispatch:
   push:
