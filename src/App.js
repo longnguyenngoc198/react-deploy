@@ -1,5 +1,5 @@
-import logo from "./logo.svg";
-import "./App.css";
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload test times 1.
+          Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -15,9 +15,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          abcd asdas
+          Hello React, check deployment
         </a>
-        <p className="App-link">Team number 2</p>
+        <p  className="App-link">Testing CI-CD, hope success</p>
       </header>
     </div>
   );
