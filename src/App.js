@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -15,9 +15,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hello React, check deployment
+          Hello React, check deployment 1
         </a>
-        <p  className="App-link">Testing CI-CD, hope success</p>
+        <p className="App-link">Testing CI-CD, hope success</p>
       </header>
     </div>
   );
