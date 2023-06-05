@@ -92,4 +92,5 @@ jobs:
       - name: Deploy
         run: npm run build --if-present
       - name: "mv build"
+        if: success()
         run: mv /home/ubuntu/actions-runner/_work/react-deploy/react-deploy/build /home/ubuntu/actions-runner/_work/react-deploy/react-deploy/deploy
