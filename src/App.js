@@ -15,8 +15,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p className="App-link">Testing CI-CD, hope success</p>
+          Hello React, test deploy
         </a>
+        <p className="App-link">Testing CI-CD, hope success</p>
       </header>
     </div>
   );
