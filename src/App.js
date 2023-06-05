@@ -1,4 +1,4 @@
-// import logo from "./logo.svg";
+import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
@@ -15,9 +15,8 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hello React, test deploy
+          <p className="App-link">Testing CI-CD, hope success</p>
         </a>
-        <p className="App-link">Testing CI-CD, hope success</p>
       </header>
     </div>
   );
