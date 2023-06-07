@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hello React, test send email 2
+          Hello React, test send email, telegram
         </a>
         <p className="App-link">Testing CI-CD, hope success</p>
       </header>

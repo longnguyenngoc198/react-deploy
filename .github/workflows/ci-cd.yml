@@ -111,3 +111,12 @@ jobs:
           to: longnguyenngoc1998@gmail.com
           # from email name
           from: John Doe
+
+      - name: Send Telegram notification
+        run: |
+          curl -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendMessage" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "chat_id": "-1001682159037",
+            "text": "GitHub Actions: Status changed to ${{ job.status }}"
+          }'
